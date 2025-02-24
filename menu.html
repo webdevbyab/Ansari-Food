@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Website</title>
+  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./logo.png" alt="Logo">
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./index.html">About Us</a></li>
+      <li><a href="#_">Menu</a></li>
+      <li><a href="./index.html">Delivery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Section -->
+  <section class="main-section">
+    <div class="main-content">
+      <h1>Welcome to Ansari Food</h1>
+      <p>Delicious food served with love</p>
+    </div>
+  </section>
+
+  <!-- Food Items Section -->
+  <section class="food-section" id="menu">
+    <h2>Burgers</h2>
+    <div class="food-container">
+      <!-- Food Card Example -->
+      <div class="food-card">
+        <img src="./half-a.png" alt="Food Item">
+        <h3>Anda Burger</h3>
+        <p>120 RS</p>
+      </div>
+
+      <div class="food-card">
+        <img src="./Full-an.png" alt="Food Item">
+        <h3>Full Burger</h3>
+        <p>150 RS</p>
+      </div>
+
+
+      <div class="food-card">
+        <img src="./chicken.png" alt="Food Item">
+        <h3>Chicken Burger</h3>
+        <p>220 RS</p>
+      </div>
+
+      <div class="food-card">
+        <img src="./Zinger.png" alt="Food Item">
+        <h3>Zinger Burger</h3>
+        <p>380 RS</p>
+      </div>
+
+      <div class="food-card">
+        <img src="./Zinger Ches.png" alt="Food Item">
+        <h3>Zinger Cheese Burger</h3>
+        <p>430 RS</p>
+      </div>
+
+      <div class="food-card">
+        <img src="./Chicken-K.png" alt="Food Item">
+        <h3>Chicken Kebab Burger</h3>
+        <p>320 RS</p>
+      </div>
+
+      <div class="food-card">
+        <img src="./Chicken-K-c.png" alt="Food Item">
+        <h3>Chicken Kebab Cheese Burger</h3>
+        <p>380 RS</p>
+      </div>
+    </div>
+
+    <h2>Boarst</h2>
+
+    <div class="food-container">
+      <div class="food-card">
+        <img src="./quater borast.png" alt="Food Item">
+        <h3>Quatar Boarst (Chest)</h3>
+        <p>450 RS</p>
+      </div>
+
+      <div class="food-card">
+        <img src="./Quater.png" alt="Food Item">
+        <h3>Quatar Boarst (Leg)</h3>
+        <p>420 RS</p>
+      </div>
+
+      <div class="food-card">
+        <img src="./half-borates.png" alt="Food Item">
+        <h3>Half Boarst (Chest + Leg)</h3>
+        <p>850 RS</p>
+      </div>
+
+      <div class="food-card">
+        <img src="./full.png" alt="Food Item">
+        <h3>Full Boarst</h3>
+        <p>1700 RS</p>
+      </div>
+
+      
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Left Section -->
+      <div class="footer-left">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#delivery">Delivery</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Section -->
+      <div class="footer-right">
+        <p>Ansari Food</p>
+        <p>Email: <a class="Email" href="mailto:info@ansarifood.com">info@ansarifood.com</a></p>
+        <div class="flag">
+          <img src="./flag.png" alt="Pakistan Flag">
+          <p>+92 <a href="tel:+921234567890">123-456-7890</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="#"><img src="./facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="./instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="./twiter.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+
+ 
+  <script>
+
+    // Toggle Hamburger Menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Close Navbar when clicking outside or on a link
+document.addEventListener('click', (event) => {
+  const isClickInsideNavbar = event.target.closest('.navbar');
+  const isClickOnHamburger = event.target.closest('.hamburger');
+  const isClickOnNavLink = event.target.closest('.nav-links a');
+
+  if (!isClickInsideNavbar && !isClickOnHamburger) {
+    navLinks.classList.remove('active');
+  }
+
+  if (isClickOnNavLink) {
+    navLinks.classList.remove('active');
+  }
+});
+  </script>
+</body>
+</html>
